@@ -187,10 +187,12 @@ void separador(const string& titulo) {
     cout << string(55, '=') << endl;
 }
 int main (){
-    Termino* nodo = nullptr;
-    Termino* nodo2 = nullptr;
-    float coeficiente=0;
-    int exponente=0;
+    Termino *nodo = nullptr;
+    Termino *nodo2 = nullptr;
+    Termino *suma = nullptr;
+    float coeficiente = 0;
+    int exponente = 0;
+    
     nodo = insertarTermino (nodo, 4.0f,3);
     nodo = insertarTermino (nodo, -2.0f,1);
     nodo = insertarTermino (nodo, 5.0f,0);
