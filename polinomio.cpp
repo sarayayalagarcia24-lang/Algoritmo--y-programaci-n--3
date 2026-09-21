@@ -207,5 +207,23 @@ int main (){
         cin >> exponente;
         nodo2=insertarTermino(nodo2,coeficiente,exponente);
     }
-    imprimirPolinomio(nodo2);    
+    cout << "Polinomio 2: " << endl;
+    imprimirPolinomio(nodo2);
+
+    suma = sumarPolinomios(nodo, nodo2);
+    cout << "La suma de los polinomios es: " << endl;
+    imprimirPolinomio(suma);
+
+    imprimirPolinomio(nodo2);   
+    cout <<" liberar memoria"<<endl;
+    ndl;
+
+    
+    cout << "Liberar memoria" << endl;
+    int liberar = 0;
+    liberar = destruirPolinomio(nodo);
+    liberar = destruirPolinomio(nodo2); 
+    cout <<"se libero el nodo 1 y nodo 2";
+
+}    
 }
