@@ -210,7 +210,7 @@ int main (){
     cout << "Polinomio 2: " << endl;
     imprimirPolinomio(nodo2);
 
-    suma = sumarPolinomios(nodo, nodo2);
+    Nodo* suma = sumarPolinomios(nodo, nodo2);
     cout << "La suma de los polinomios es: " << endl;
     imprimirPolinomio(suma);
 
