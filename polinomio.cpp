@@ -223,7 +223,5 @@ int main (){
     int liberar = 0;
     liberar = destruirPolinomio(nodo);
     liberar = destruirPolinomio(nodo2); 
-    cout <<"se libero el nodo 1 y nodo 2";
-
-}    
+    cout <<"se libero el nodo 1 y nodo 2";   
 }
