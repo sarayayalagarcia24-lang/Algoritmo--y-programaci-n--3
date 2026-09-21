@@ -216,7 +216,7 @@ int main (){
 
     imprimirPolinomio(nodo2);   
     cout <<" liberar memoria"<<endl;
-    ndl;
+  
 
     
     cout << "Liberar memoria" << endl;
