@@ -36,18 +36,15 @@ public:
     }
 
 
-    // PolF2::sonIguales(PolF2 b)
-
+    
     bool sonIguales(const PolF2& b) {
 
-        // Primero compara cantidad de términos
-
+    
         if (Vec[0] != b.Vec[0])
             return false;
 
 
-        // Compara exponentes y coeficientes
-
+        
         int i = 1;
 
         while (i <= Vec[0] * 2) {
@@ -87,14 +84,12 @@ int main() {
     PolF2 A;
     PolF2 B;
 
-    // A = 61x^4 - 62x^3 - 76
-
+    
     A.insertar(4, 61);
     A.insertar(3, -62);
     A.insertar(0, -76);
 
 
-    // B = 3x^2 + 2x - 5
 
     B.insertar(2, 3);
     B.insertar(1, 2);
