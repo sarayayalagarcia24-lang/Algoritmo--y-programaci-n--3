@@ -109,7 +109,7 @@ public:
 
 int main() {
 
-    // A = 61x^4 - 62x^3 - 76
+    
 
     PolF2 A;
 
@@ -118,7 +118,7 @@ int main() {
     A.insertar(0, -76);
 
 
-    // B = 3x^2 + 2x - 5
+    
 
     PolF2 B;
 
