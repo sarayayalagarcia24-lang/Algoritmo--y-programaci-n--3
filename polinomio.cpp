@@ -4,19 +4,26 @@
 #include <string>
 
 using namespace std;
+
 struct Termino { 
+
+struct Termino {
+
     float coeficiente;
     int   exponente;
     Termino* siguiente;
 };
-
 Termino* crearNodo(float coef, int exp) {
     Termino* nuevo = new Termino();
     nuevo->coeficiente = coef;
     nuevo->exponente   = exp;
     nuevo->siguiente   = nullptr;
     return nuevo;
+
 } 
+
+
+}
 
 Termino* insertarTermino(Termino* cabeza, float coef, int exp) {
     if (coef == 0.0f) return cabeza;
@@ -54,7 +61,11 @@ Termino* insertarTermino(Termino* cabeza, float coef, int exp) {
         actual->siguiente    = nuevo;
     }
     return cabeza;
+
 } 
+
+}
+
 void imprimirPolinomio(Termino* cabeza) {
     if (cabeza == nullptr) {
         cout << "0";
@@ -100,7 +111,11 @@ int destruirPolinomio(Termino*& cabeza) {
         contador++;
     }
     return contador;
+
 } 
+
+}
+
 Termino* sumarPolinomios(Termino* p1, Termino* p2) {
     Termino* resultado = nullptr;
 
@@ -188,6 +203,31 @@ void separador(const string& titulo) {
     cout << "  " << titulo << endl;
     cout << string(55, '=') << endl;
 }
+int main (){
+  Termino *nodo = nullptr;
+    Termino *nodo2 = nullptr;
+    Termino *suma = nullptr;
+    float coeficiente = 0;
+    int exponente = 0;
+    /*
+    nodo = insertarTermino(nodo, 4.0f, 3);
+    nodo = insertarTermino(nodo, -2.0f, 1);
+    nodo = insertarTermino(nodo, 5.0f, 0);
+    nodo = insertarTermino(nodo, -1.0f, 2);
+    cout << "Polinomio (x)";
+    imprimirPolinomio(nodo);
+    */
+    cout << "Grado: " << gradoPolinomio(nodo) << endl;
+    cout << "Nodos: " << contarTerminos(nodo) << endl;
+    for (int i = 0; i < 4; i++)
+    {
+        cout << "Ingresa el coeficiente: ";
+        cin >> coeficiente;
+        cout << "Ingresa el exponente: ";
+        cin >> exponente;
+        nodo = insertarTermino(nodo, coeficiente, exponente);
+    }
+
 
 int main() {
     Termino *nodo = nullptr;
@@ -242,5 +282,32 @@ int main() {
     liberar = destruirPolinomio(nodo2);
     liberar = destruirPolinomio(resultado);
     
+=======
+    cout << "Polinomio 1: " << endl;
+    imprimirPolinomio(nodo);
+
+    for (int i = 0; i < 4; i++)
+    {
+        cout << "Ingresa el coeficiente: ";
+        cin >> coeficiente;
+        cout << "Ingresa el exponente: ";
+        cin >> exponente;
+        nodo2 = insertarTermino(nodo2, coeficiente, exponente);
+    }
+
+    cout << "Polinomio 2: " << endl;
+    imprimirPolinomio(nodo2);
+
+    suma = sumarPolinomios(nodo, nodo2);
+    cout << "La suma de los polinomios es: " << endl;
+    imprimirPolinomio(suma);
+
+    cout << "Liberar memoria" << endl;
+    int liberar = 0;
+    liberar = destruirPolinomio(nodo);
+    liberar = destruirPolinomio(nodo2);
+    liberar = destruirPolinomio(suma);
+
     cout << "Se libero el nodo 1 y nodo 2" << endl;
 }
+
