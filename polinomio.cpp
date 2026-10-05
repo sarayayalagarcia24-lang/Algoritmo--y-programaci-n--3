@@ -119,7 +119,6 @@ int destruirPolinomio(Termino*& cabeza) {
 Termino* sumarPolinomios(Termino* p1, Termino* p2) {
     Termino* resultado = nullptr;
 
-    // Copiar todos los términos de P1
     Termino* actual = p1;
     while (actual != nullptr) {
         resultado = insertarTermino(resultado,
@@ -128,7 +127,6 @@ Termino* sumarPolinomios(Termino* p1, Termino* p2) {
         actual = actual->siguiente;
     }
 
-    // Sumar (insertar) todos los términos de P2
     actual = p2;
     while (actual != nullptr) {
         resultado = insertarTermino(resultado,
@@ -194,7 +192,7 @@ int contarTerminos(Termino* cabeza) {
 }
 
 int gradoPolinomio(Termino* cabeza) {
-    if (cabeza == nullptr) return -1;  // polinomio vacío
+    if (cabeza == nullptr) return -1;  
     return cabeza->exponente;
 }
 
